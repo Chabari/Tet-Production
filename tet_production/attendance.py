@@ -59,3 +59,31 @@ def handle_new_log(doc, method):
     frappe.enqueue(
         'tet_production.attendance.send_attendance'
     )
+    
+def schedule_attendance():
+    try:
+        # Get the settings
+        settings = frappe.get_doc('Biometric Integration Settings', 'Biometric Integration Settings')
+        
+        # Set the time range for today
+        today = datetime.now().date()
+        start_time = datetime.combine(today, datetime.strptime("00:00:00", "%H:%M:%S").time())
+        end_time = datetime.combine(today, datetime.strptime("23:59:59", "%H:%M:%S").time())
+        
+        # Update the settings with today's date range
+        settings.start_date_and_time = start_time.strftime('%Y-%m-%d %H:%M:%S')
+        settings.end_date_and_time = end_time.strftime('%Y-%m-%d %H:%M:%S')
+        settings.save()
+        
+        # Call the sync function
+        frappe.enqueue(
+            'biometric_integration.biometric_integration.doctype.biometric_integration_settings.biometric_integration_settings.sync_attendance',
+            queue='long',
+            timeout=1500
+        )
+        
+        frappe.logger().info("Scheduled attendance sync started successfully")
+        
+    except Exception as e:
+        frappe.logger().error(f"Scheduled attendance sync failed: {str(e)}")
+        frappe.log_error(f"Scheduled attendance sync failed: {str(e)}", "Daily Attendance Sync Error")
