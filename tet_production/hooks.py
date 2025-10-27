@@ -42,6 +42,9 @@ scheduler_events = {
     "cron": {
         "*/30 * * * *": [
             "tet_production.attendance.schedule_attendance"
+        ],
+        "0 21 * * *": [
+            "tet_production.attendance.process_attendance"
         ]
     }
 }
