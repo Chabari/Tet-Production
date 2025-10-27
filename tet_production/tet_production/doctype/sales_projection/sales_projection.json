@@ -1,0 +1,138 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "format:SLP-{YY}-{MM}-{###}",
+ "creation": "2025-09-27 14:28:31.445877",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "posting_date",
+  "month",
+  "total_quantity",
+  "column_break_tkpn",
+  "is_active",
+  "item_group",
+  "fetch_items",
+  "section_break_dnsv",
+  "items"
+ ],
+ "fields": [
+  {
+   "fieldname": "posting_date",
+   "fieldtype": "Date",
+   "in_list_view": 1,
+   "in_preview": 1,
+   "label": "Posting Date",
+   "reqd": 1
+  },
+  {
+   "depends_on": "eval: doc.posting_date != null",
+   "fieldname": "month",
+   "fieldtype": "Select",
+   "label": "Sales Projection Month",
+   "options": "\nJanuary\nFebruary\nMarch\nApril\nMay\nJune\nJuly\nAugust\nSeptember\nOctober\nNovember\nDecember"
+  },
+  {
+   "fieldname": "column_break_tkpn",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "1",
+   "fieldname": "is_active",
+   "fieldtype": "Check",
+   "in_list_view": 1,
+   "in_preview": 1,
+   "label": "Is Active"
+  },
+  {
+   "fieldname": "item_group",
+   "fieldtype": "Link",
+   "label": "Item Group",
+   "options": "Item Group"
+  },
+  {
+   "depends_on": "eval: doc.item_group != null",
+   "fieldname": "fetch_items",
+   "fieldtype": "Button",
+   "label": "Fetch Items From The Item Group"
+  },
+  {
+   "fieldname": "total_quantity",
+   "fieldtype": "HTML",
+   "label": "Total Quantities:"
+  },
+  {
+   "fieldname": "section_break_dnsv",
+   "fieldtype": "Section Break",
+   "label": "Sales Item"
+  },
+  {
+   "fieldname": "items",
+   "fieldtype": "Table",
+   "label": "Items",
+   "options": "Sales Projection Item"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2025-09-27 15:56:40.842199",
+ "modified_by": "Administrator",
+ "module": "Tet Production",
+ "name": "Sales Projection",
+ "naming_rule": "Expression",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Sales Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Sales Master Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Stock Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": [],
+ "track_changes": 1
+}

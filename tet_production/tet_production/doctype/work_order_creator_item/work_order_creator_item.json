@@ -1,0 +1,87 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2025-09-28 19:34:35.703428",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "item",
+  "safety_stock",
+  "pending_orders",
+  "column_break_jcok",
+  "bom",
+  "stock_balance",
+  "work_order_quantity"
+ ],
+ "fields": [
+  {
+   "fieldname": "item",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "in_preview": 1,
+   "label": "Item",
+   "options": "Item",
+   "reqd": 1
+  },
+  {
+   "fieldname": "column_break_jcok",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "bom",
+   "fieldtype": "Link",
+   "label": "BOM",
+   "options": "BOM",
+   "read_only": 1,
+   "reqd": 1
+  },
+  {
+   "fieldname": "safety_stock",
+   "fieldtype": "Float",
+   "in_list_view": 1,
+   "in_preview": 1,
+   "label": "Safety Stock(A)",
+   "reqd": 1
+  },
+  {
+   "fieldname": "pending_orders",
+   "fieldtype": "Float",
+   "in_list_view": 1,
+   "in_preview": 1,
+   "label": "Pending Orders(B)",
+   "reqd": 1
+  },
+  {
+   "fieldname": "stock_balance",
+   "fieldtype": "Float",
+   "in_list_view": 1,
+   "in_preview": 1,
+   "label": "Stock Balance(C)",
+   "reqd": 1
+  },
+  {
+   "fieldname": "work_order_quantity",
+   "fieldtype": "Float",
+   "in_list_view": 1,
+   "in_preview": 1,
+   "label": "Quantity Deficit((A+B) - C)",
+   "read_only": 1,
+   "reqd": 1
+  }
+ ],
+ "grid_page_length": 50,
+ "index_web_pages_for_search": 1,
+ "istable": 1,
+ "links": [],
+ "modified": "2025-09-28 20:55:35.867444",
+ "modified_by": "Administrator",
+ "module": "Tet Production",
+ "name": "Work Order Creator Item",
+ "owner": "Administrator",
+ "permissions": [],
+ "row_format": "Dynamic",
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

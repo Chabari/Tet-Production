@@ -1,0 +1,80 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2025-09-28 19:26:38.411104",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "total_quantities",
+  "pending_orders",
+  "column_break_zxvk",
+  "raw_materials",
+  "work_order_id",
+  "section_break_gtxa",
+  "items"
+ ],
+ "fields": [
+  {
+   "fieldname": "total_quantities",
+   "fieldtype": "HTML",
+   "label": "Total Quantities"
+  },
+  {
+   "fieldname": "pending_orders",
+   "fieldtype": "HTML",
+   "label": "Pending Orders"
+  },
+  {
+   "fieldname": "column_break_zxvk",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "raw_materials",
+   "fieldtype": "HTML",
+   "label": "Raw Materials"
+  },
+  {
+   "fieldname": "section_break_gtxa",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "items",
+   "fieldtype": "Table",
+   "label": "Items",
+   "options": "Work Order Creator Item"
+  },
+  {
+   "fieldname": "work_order_id",
+   "fieldtype": "Data",
+   "hidden": 1,
+   "label": "Work Order ID",
+   "print_hide": 1,
+   "read_only": 1
+  }
+ ],
+ "grid_page_length": 50,
+ "index_web_pages_for_search": 1,
+ "issingle": 1,
+ "links": [],
+ "modified": "2025-09-29 10:32:03.603740",
+ "modified_by": "Administrator",
+ "module": "Tet Production",
+ "name": "Work Order Creator",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "print": 1,
+   "read": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "row_format": "Dynamic",
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}
