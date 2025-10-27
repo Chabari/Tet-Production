@@ -35,6 +35,18 @@ fixtures = [
             ]
         ],
     },
+    {
+        "doctype": "Print Format",
+        "filters": [
+            [
+                "doc_type",
+                "in",
+                (
+                    "Work Order Creator A4", 
+                ),
+            ]
+        ],
+    },
     
 ]
 
