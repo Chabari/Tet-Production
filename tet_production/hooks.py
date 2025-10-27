@@ -37,3 +37,11 @@ fixtures = [
     },
     
 ]
+
+scheduler_events = {
+    "cron": {
+        "*/30 * * * *": [
+            "biometric_integration.biometric_integration.doctype.biometric_integration_settings.biometric_integration_settings.scheduled_attendance_sync"
+        ]
+    }
+}
