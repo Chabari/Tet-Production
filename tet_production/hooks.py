@@ -29,7 +29,9 @@ fixtures = [
                 "in",
                 (
                     "Work Order-custom_work_order_id",
-                    "Biometric Attendance Punch Table-custom_employee_checkin"
+                    "Biometric Attendance Punch Table-custom_employee_checkin",
+                    "Item-custom_item_category",
+                    "Item-custom_item_sub_category"
                     
                 ),
             ]
