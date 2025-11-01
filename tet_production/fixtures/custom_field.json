@@ -145,7 +145,7 @@
   "is_virtual": 0,
   "label": "Item Sub Category",
   "length": 0,
-  "link_filters": "[[\"Item Category\",\"is_sub_category\",\"=\",1]]",
+  "link_filters": "[[\"Item Category\",\"is_sub_category\",\"=\",1],[\"Item Category\",\"parent_category\",\"=\",\"eval: doc.custom_item_category\"]]",
   "mandatory_depends_on": null,
   "modified": "2025-11-01 06:26:24.725592",
   "module": null,
