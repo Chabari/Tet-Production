@@ -31,7 +31,11 @@ fixtures = [
                     "Work Order-custom_work_order_id",
                     "Biometric Attendance Punch Table-custom_employee_checkin",
                     "Item-custom_item_category",
-                    "Item-custom_item_sub_category"
+                    "Item-custom_item_sub_category",
+                    "Customer-custom_region",
+                    "Customer-custom_county",
+                    "Customer-custom_area",
+                    "Supplier-custom_kra_pin"
                     
                 ),
             ]
